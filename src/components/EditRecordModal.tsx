@@ -29,7 +29,7 @@ export default function EditRecordModal({ isEditOpen, handleEditModalClose, tran
 
   const editRecord = async () => {
     try {
-      const response = await axios.put(`http://localhost:999/edit-transaction/${transactionId}`, {
+      const response = await axios.put(`https://income-tracker-service-2z57.onrender.com/edit-transaction/${transactionId}`, {
         transactionType,
         amount,
         category,

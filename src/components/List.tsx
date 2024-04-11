@@ -3,8 +3,8 @@ import { ListItem, Transaction } from "./ListItem";
 
 interface Props {
     transactions: Transaction[];
-    onDelete: (id: string) => void; 
-    handleModalOpen: () => void;
+    onDelete: (id: string) => void;
+    handleModalOpen: () => void; 
 }
 
 export const List: React.FC<Props> = ({ transactions, onDelete, handleModalOpen }) => {
@@ -25,11 +25,11 @@ export const List: React.FC<Props> = ({ transactions, onDelete, handleModalOpen 
                 paddingBottom: "10px"
             }}>Last records</h3>
             {transactions?.map((transaction, index) => (
-                <ListItem 
-                    key={index} 
+                <ListItem
+                    key={index}
                     transaction={transaction}
                     onDelete={() => onDelete(transaction._id)}
-                    handleModalOpen={handleModalOpen} 
+                    handleModalOpen={handleModalOpen}
                 />
             ))}
         </div>

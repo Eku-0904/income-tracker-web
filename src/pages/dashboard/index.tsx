@@ -7,13 +7,12 @@ import { List } from '@/components/List';
 import NavbarDashboard from '@/components/NavbarDashboard';
 
 const Dashboard = () => {
-
-  const handleModalOpen = () => {
-  };
+  // Empty function since handleModalOpen is not used in Dashboard
+  const handleModalOpen = () => {};
 
   return (
     <div className="dashboardContainer">
-      <NavbarDashboard />
+      <NavbarDashboard handleModalOpen={handleModalOpen} />
       <div className='middleContainer'>
         <div className="cards">
           <Card />

@@ -29,7 +29,7 @@ export default function CreateRecordModal({ open, handleModalOpen, setFetch }: P
 
   const addRecord = async () => {
     try {
-      const response = await axios.post('http://localhost:999/create-transaction', {
+      const response = await axios.post('https://income-tracker-service-2z57.onrender.com/create-transaction', {
         transactionType,
         amount,
         category,

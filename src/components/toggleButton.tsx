@@ -1,11 +1,17 @@
+import React from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 
-export default function ColorToggleButton({transactionType, setTransactionType}) {
+interface ColorToggleButtonProps {
+  transactionType: string;
+  setTransactionType: (type: 'expense' | 'income') => void;
+}
+
+const ColorToggleButton: React.FC<ColorToggleButtonProps> = ({ transactionType, setTransactionType }) => {
 
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
-    type: string,
+    type: 'expense' | 'income',
   ) => {
     setTransactionType(type);
   };
@@ -50,3 +56,5 @@ export default function ColorToggleButton({transactionType, setTransactionType})
     </div>
   );
 }
+
+export default ColorToggleButton;

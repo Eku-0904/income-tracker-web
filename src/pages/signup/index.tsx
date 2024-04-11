@@ -29,7 +29,7 @@ const Signup = () => {
         return;
       }
       setLoader(true);
-      const res = await axios.post<SignupResponse>("http://localhost:999/signup",{username: username,password: password,email: email,});
+      const res = await axios.post<SignupResponse>("https://income-tracker-service-2z57.onrender.com/signup",{username: username,password: password,email: email,});
       setLoader(false);
       router.back();
     } catch (error) {

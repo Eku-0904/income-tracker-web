@@ -15,7 +15,7 @@ const Login = () => {
         return;
       }
 
-      const res = await axios.post('http://localhost:999/login', {
+      const res = await axios.post('https://income-tracker-service-2z57.onrender.com/login', {
         email: email,
         password: password,
       });
