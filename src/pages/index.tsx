@@ -9,6 +9,6 @@ export default function Home() {
   const sum = 6
 
   return (
-   <></>
+   <div></div>
   );
 }
