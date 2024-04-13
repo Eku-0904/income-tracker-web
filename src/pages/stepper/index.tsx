@@ -3,10 +3,10 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import SelectTextFields from "@/components/currency";
-import BalanceStep from "@/components/balance";
-import FinalStep from "@/components/FinishStep";
-import { GeldIcon } from "@/components/icons/GeldIcon";
+import SelectTextFields from "../../components/currency";
+import BalanceStep from "../../components/balance";
+import FinalStep from "../../components/FinishStep";
+import { GeldIcon } from "../../components/icons/GeldIcon";
 
 const steps = ["Select base currency", "Your balance", "Finish"];
 
@@ -34,7 +34,6 @@ const StepperPage = () => {
   };
 
   const handleGoToDashboard = () => {
-    // Navigate to the dashboard or perform any other action
     console.log("Navigating to dashboard...");
   };
 
