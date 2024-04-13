@@ -3,8 +3,8 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import SelectTextFields from "../../components/currency";
-import BalanceStep from "../../components/balance";
+import SelectTextFields from "@/components/currency";
+import BalanceStep from "@/components/balance";
 import FinalStep from "@/components/FinishStep";
 import { GeldIcon } from "@/components/icons/GeldIcon";
 
