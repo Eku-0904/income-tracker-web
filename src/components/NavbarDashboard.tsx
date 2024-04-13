@@ -1,13 +1,24 @@
 import { useRouter } from "next/router"
 import { Shatar } from "./icons/TsenherShatar"
 
-type Props = {
-    handleModalOpen: ()=> void;
-}
-
-
-export default function NavbarDashboard({handleModalOpen}: Props) {
+export default function NavbarDashboard() {
     const router = useRouter()
+
+    const goToDashboard = async () => {
+        try {
+            await router.push("./dashboard");
+        } catch (error) {
+            console.error('Error navigating to dashboard:', error);
+        }
+    };
+
+    const goToRecords = async () => {
+        try {
+            await router.push("./records");
+        } catch (error) {
+            console.error('Error navigating to records:', error);
+        }
+    };
 
     return (
         <div style={{
@@ -19,14 +30,14 @@ export default function NavbarDashboard({handleModalOpen}: Props) {
             alignItems: 'center',
             padding: '0 20px'
         }}>
-            <  Shatar />
+            <Shatar />
             <div style={{
                 marginLeft: "20px",
                 cursor: "pointer",
-            }} onClick={()=> router.push("./dashboard")}>
+            }} onClick={goToDashboard}>
                 Dashboard
             </div>
-            <div onClick={()=> router.push("./records")}style={{
+            <div onClick={goToRecords} style={{
                 marginLeft: "20px",
                 cursor: "pointer",
             }}>

@@ -8,8 +8,8 @@ import axios from 'axios';
 
 type Props = {
   open: boolean;
-  handleModalOpen: () => void
-  setFetch: React.Dispatch<React.SetStateAction<boolean>>
+  handleModalOpen: () => void;
+  setFetch: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export default function CreateRecordModal({ open, handleModalOpen, setFetch }: Props) {
@@ -24,27 +24,24 @@ export default function CreateRecordModal({ open, handleModalOpen, setFetch }: P
   };
 
   const handleNoteValue = (value: string) => {
-    setNote(String(value));
+    setNote(value);
   };
 
   const addRecord = async () => {
     try {
-      const response = await axios.post('https://income-tracker-service-2z57.onrender.com/create-transaction', {
+      await axios.post('https://income-tracker-service-2z57.onrender.com/create-transaction', {
         transactionType,
         amount,
         category,
         date,
         note
       });
-      if(response){
-        setFetch(false)
-        handleModalOpen();
-      }
+      setFetch(false);
+      handleModalOpen();
     } catch (error) {
       console.error('Error', error);
     }
   };
-  
 
   return (
     <Modal
@@ -148,6 +145,3 @@ export default function CreateRecordModal({ open, handleModalOpen, setFetch }: P
     </Modal>
   )
 }
-
-
-

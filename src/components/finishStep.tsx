@@ -10,7 +10,8 @@ const FinalStep: React.FC<FinalStepProps> = ({ goToDashboard }) => {
   const router = useRouter();
 
   const handleGoToDashboard = () => {
-    router.push("/dashboard");
+    goToDashboard();
+    router.push("/dashboard")
   };
 
   return (

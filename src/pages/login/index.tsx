@@ -59,7 +59,7 @@ const Login = () => {
             <button className='login' onClick={loginUser}>
               Login
             </button>
-            <p>Don't have an account?</p>
+            <p>Don&apos;t have an account?</p>
             <div className='signup-link' onClick={changeRoute}>
               Sign up
             </div>

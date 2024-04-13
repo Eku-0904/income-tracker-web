@@ -24,21 +24,19 @@ export default function EditRecordModal({ isEditOpen, handleEditModalClose, tran
   };
 
   const handleNoteValue = (value: string) => {
-    setNote(String(value));
+    setNote(value);
   };
 
   const editRecord = async () => {
     try {
-      const response = await axios.put(`https://income-tracker-service-2z57.onrender.com/edit-transaction/${transactionId}`, {
+      await axios.put(`https://income-tracker-service-2z57.onrender.com/edit-transaction/${transactionId}`, {
         transactionType,
         amount,
         category,
         date,
         note
       });
-      if(response){
-        handleEditModalClose()
-      }
+      handleEditModalClose();
     } catch (error) {
       console.error('Error', error);
     }
