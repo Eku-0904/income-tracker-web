@@ -5,7 +5,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import SelectTextFields from "../../components/currency";
 import BalanceStep from "../../components/balance";
-import FinishStep from "@/components/FinishStep";
+import FinishStep from "../../components/FinishStep";
 import { GeldIcon } from "../../components/icons/GeldIcon";
 
 const steps = ["Select base currency", "Your balance", "Finish"];
