@@ -6,7 +6,7 @@ interface FinalStepProps {
   goToDashboard: () => void;
 }
 
-const FinalStep: React.FC<FinalStepProps> = ({ goToDashboard }) => {
+const FinishStep: React.FC<FinalStepProps> = ({ goToDashboard }) => {
   const router = useRouter();
 
   const handleGoToDashboard = () => {
@@ -27,4 +27,4 @@ const FinalStep: React.FC<FinalStepProps> = ({ goToDashboard }) => {
   );
 };
 
-export default FinalStep;
+export default FinishStep;
