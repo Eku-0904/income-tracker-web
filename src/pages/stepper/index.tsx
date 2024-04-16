@@ -48,12 +48,12 @@ const StepperPage = () => {
         paddingTop: "20px",
       }}
     >
-        <GeldIcon/> 
-      <Stepper activeStep={activeStep} 
-      sx={{ 
-        width: "500px",
-        marginTop: "30px",
-     }}>
+      <GeldIcon />
+      <Stepper activeStep={activeStep}
+        sx={{
+          width: "500px",
+          marginTop: "30px",
+        }}>
         {steps.map((label, index) => {
           const stepProps: { completed?: boolean } = {};
           const labelProps: {

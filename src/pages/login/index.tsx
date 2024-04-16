@@ -40,7 +40,7 @@ const Login = () => {
       <div className="container">
         <div className="left">
           <div className='inputs'>
-            <GeldIcon/>
+            <GeldIcon />
             <h1 className='welcome' >Welcome Back</h1>
             <p className='welcomex' >Welcome back, Please enter your details</p>
             <input

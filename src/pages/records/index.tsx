@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SideBar from '@/components/SideBar';
 import Navbar from '@/components/Navbar';
 import { List } from '@/components/List';
-import CreateRecordModal from '@/components/CreateRecordModal';
+import { CreateRecordModal } from '@/components/CreateRecordModal';
 import axios from 'axios';
 
 interface Transaction {

@@ -22,10 +22,10 @@ type Props = {
 export const ListItem: React.FC<Props> = ({ transaction, onDelete }) => {
   const [isEditOpen, setIsEditOpen] = useState(false);
   const handleEditModalClose = () => setIsEditOpen(false);
-  const date1 = new Date(transaction.createdAt);
-  const date2 = new Date();
-  const differenceMs = Number(date2) - Number(date1);
-  const differenceHours = Math.round(differenceMs / (1000 * 60 * 60));
+  // const date1 = new Date(transaction.createdAt);
+  // const date2 = new Date();
+  // const differenceMs = Number(date2) - Number(date1);
+  // const differenceHours = Math.round(differenceMs / (1000 * 60 * 60));
 
   const color = transaction.transactionType === 'expense' ? '#ff474c' : '#2dfe54';
 

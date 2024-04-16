@@ -30,7 +30,7 @@ export const List: React.FC<Props> = ({ transactions, onDelete, handleModalOpen 
       >
         Last records
       </h3>
-      {transactions?.map((transaction, index) => (
+      {transactions.map((transaction, index) => (
         <ListItem
           key={index}
           transaction={transaction}

@@ -3,7 +3,7 @@ import Card from '../../components/Card';
 import CardInfo from '../../components/infoCard';
 import DoughnutChart from '../../components/Doughnut';
 import BarChart from '@/components/BarChart';
-import { List } from '@/components/List';
+// import { List } from '@/components/List';
 import NavbarDashboard from '@/components/NavbarDashboard';
 
 const Dashboard = () => {

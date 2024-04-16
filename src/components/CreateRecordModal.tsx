@@ -12,7 +12,7 @@ type Props = {
   setFetch: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function CreateRecordModal({ open, handleModalOpen, setFetch }: Props) {
+export const CreateRecordModal = ({ open, handleModalOpen, setFetch }: Props) => {
   const [transactionType, setTransactionType] = useState('expense');
   const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState("");
@@ -42,6 +42,9 @@ export default function CreateRecordModal({ open, handleModalOpen, setFetch }: P
       console.error('Error', error);
     }
   };
+  const handleClick = () => {
+    addRecord();
+  }
 
   return (
     <Modal
@@ -104,7 +107,7 @@ export default function CreateRecordModal({ open, handleModalOpen, setFetch }: P
             </div>
 
             <div
-              onClick={addRecord}
+              onClick={handleClick}
               style={{
                 backgroundColor: "#0166FF",
                 height: "35px",
